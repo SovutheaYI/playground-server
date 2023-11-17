@@ -5,6 +5,8 @@ import { ClassSerializerInterceptor } from '@nestjs/common';
 import { SwaggerModule } from '@nestjs/swagger';
 import { PUBLIC_DOCUMENT } from './documents';
 
+const PORT = process.env.PORT || 5000
+
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     cors: true
@@ -14,6 +16,6 @@ async function bootstrap() {
 
   SwaggerModule.setup('docs', app, PUBLIC_DOCUMENT(app))
   
-  await app.listen(3000);
+  await app.listen(PORT);
 }
 bootstrap();
