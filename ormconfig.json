@@ -1,0 +1,14 @@
+{
+  "type": "mssql",
+  "host": "154.26.134.127\\SQL2022DEV,8899",
+  "port": 8899,
+  "username": "dc",
+  "password": "mast3r1@3",
+  "database": "Bac2Student",
+  "synchronize": true,
+  "logging": true,
+  "entities": ["dist/**/*.entity.js"],
+  "cli": {
+    "entitiesDir": "src/entities"
+  }
+}

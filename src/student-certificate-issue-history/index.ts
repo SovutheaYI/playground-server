@@ -1,0 +1,1 @@
+export { StudentCertificateIssueHistoryModule } from './student-certificate-issue-history.module'

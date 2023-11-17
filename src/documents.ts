@@ -2,6 +2,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 import { INestApplication } from '@nestjs/common'
 
 import { AppModule } from './app.module'
+import { StudentCertificateIssueHistoryModule } from './student-certificate-issue-history'
 
 export const PUBLIC_DOCUMENT = (app: INestApplication) => {
   const description = `Access resource api, property information, update user profile programmatically <br/><br/>
@@ -15,6 +16,7 @@ export const PUBLIC_DOCUMENT = (app: INestApplication) => {
 
   return SwaggerModule.createDocument(app, options, {
     include: [
+      StudentCertificateIssueHistoryModule,
       AppModule
     ],
     extraModels: [
